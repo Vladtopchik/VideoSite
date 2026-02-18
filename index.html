@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vlad | Nude Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --bg: #f5efe9;
+    --accent: #d6c1b2;
+    --accent-dark: #c2a999;
+    --text: #4b413b;
+    --white: #ffffff;
+    --glass: rgba(255,255,255,0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    backdrop-filter: blur(12px);
+    background: var(--glass);
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: 0.3s ease;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: var(--accent-dark);
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* HEADER */
+header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    background: linear-gradient(135deg, #f5efe9, #e9ddd4);
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.8rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin: 0 auto 30px;
+}
+
+.btn {
+    padding: 12px 30px;
+    border-radius: 30px;
+    background: var(--accent);
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background: var(--accent-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* SECTIONS */
+section {
+    padding: 100px 10%;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--white);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* FOOTER */
+footer {
+    background: var(--accent);
+    text-align: center;
+    padding: 30px;
+    font-size: 0.9rem;
+}
+
+/* MOBILE */
+@media(max-width: 768px){
+    nav ul {
+        gap: 15px;
+        font-size: 0.9rem;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">Vlad Studio</div>
+    <ul>
+        <li><a href="#about">Про мене</a></li>
+        <li><a href="#services">Послуги</a></li>
+        <li><a href="#contact">Контакти</a></li>
+    </ul>
+</nav>
+
+<header>
+    <div class="hero">
+        <h1>Естетика в деталях</h1>
+        <p>Створюю сучасні digital-рішення в нюдовій палітрі з фокусом на мінімалізм та елегантність.</p>
+        <button class="btn">Дізнатися більше</button>
+    </div>
+</header>
+
+<section id="about">
+    <h2 class="section-title">Про мене</h2>
+    <div class="cards">
+        <div class="card">
+            Мінімалістичний дизайн з продуманою типографікою.
+        </div>
+        <div class="card">
+            Адаптивна верстка для будь-яких пристроїв.
+        </div>
+        <div class="card">
+            Брендинг у теплих, натуральних відтінках.
+        </div>
+    </div>
+</section>
+
+<section id="services">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/K69eff1W5S8?si=LGkCUDmvFsXUHSja" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h2 class="section-title">Послуги</h2>
+    <div class="cards">
+        <div class="card">Landing Page</div>
+        <div class="card">UI/UX Design</div>
+        <div class="card">Frontend Development</div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">Контакти</h2>
+    <div class="card" style="max-width:400px;margin:auto;">
+        Email: your@email.com<br>
+        Telegram: @yourprofile
+    </div>
+</section>
+
+<footer>
+    © 2026 Vlad Studio
+</footer>
+
+</body>
+</html>
