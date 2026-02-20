@@ -51,9 +51,9 @@ img {
 /* HEADER */
 header {
     position: relative;
-    margin-top: 10vh;
+    margin-top: 130px;
     width: 100%;
-    height: 46vw;
+    height: 49vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,8 +72,8 @@ section {
 
 iframe {
     position: relative;
-    width: 80%;
-    height: 83%;
+    width: 90%;
+    height: 87%;
 }
 
 #ua {
